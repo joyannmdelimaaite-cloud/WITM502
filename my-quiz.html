@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Interests Quiz</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f7e9ef;
+      padding:30px;
+      color:#ff4f8b;
+    }
+
+    .container{
+      max-width:850px;
+      margin:auto;
+    }
+
+    .banner{
+      background:
+      linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+      padding:35px;
+      border-radius:20px;
+      text-align:center;
+      color:white;
+      margin-bottom:25px;
+    }
+
+    .banner h1{
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .banner p{
+      font-size:14px;
+    }
+
+    .quiz-box{
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-group{
+      margin-bottom:18px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:6px;
+      font-weight:bold;
+    }
+
+    input[type="text"]{
+      width:100%;
+      padding:12px;
+      border:2px dashed #ffb6cc;
+      border-radius:12px;
+      outline:none;
+    }
+
+    .question{
+      margin-top:25px;
+      padding:20px;
+      border:2px dashed #ffc4d7;
+      border-radius:18px;
+      background:#fff8fb;
+    }
+
+    .question p{
+      margin-bottom:15px;
+      font-weight:bold;
+      color:#ff4f8b;
+      line-height:1.5;
+    }
+
+    .options{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .options label{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:normal;
+      color:#444;
+      cursor:pointer;
+    }
+
+    input[type="radio"]{
+      accent-color:#ff4f8b;
+      transform:scale(1.1);
+    }
+
+    button{
+      width:100%;
+      padding:15px;
+      margin-top:30px;
+      border:none;
+      border-radius:15px;
+      background:#ff6f9f;
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#ff3d7a;
+    }
+
+    #result{
+      margin-top:25px;
+      text-align:center;
+      font-size:25px;
+      font-weight:bold;
+      color:#ff4f8b;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="banner">
+      <h1>♡ My Interests Quiz ♡</h1>
+      <p>Test your knowledge about my favorite interests!</p>
+    </div>
+
+    <div class="quiz-box">
+
+      
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+
+      
+      <div class="question">
+        <p>1. Which Korean drama became globally popular because of its survival game concept?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> True Beauty</label>
+          <label><input type="radio" name="q1" value="b"> Squid Game</label>
+          <label><input type="radio" name="q1" value="c"> Business Proposal</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. Which perfume concentration usually lasts the longest on the skin?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> Body Mist</label>
+          <label><input type="radio" name="q2" value="b"> Eau de Toilette</label>
+          <label><input type="radio" name="q2" value="c"> Parfum</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>3. Which luxury brand is famous for monogram designer bags?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q3" value="a"> Louis Vuitton</label>
+          <label><input type="radio" name="q3" value="b"> Nike</label>
+          <label><input type="radio" name="q3" value="c"> Puma</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>4. What type of shoes are mainly designed for sports and running?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q4" value="a"> Sandals</label>
+          <label><input type="radio" name="q4" value="b"> Sneakers</label>
+          <label><input type="radio" name="q4" value="c"> Heels</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>5. Why do many students prefer shopping at ukay-ukay stores?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q5" value="a"> Imported gadgets</label>
+          <label><input type="radio" name="q5" value="b"> Brand-new appliances</label>
+          <label><input type="radio" name="q5" value="c"> Affordable fashionable clothes</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>6. How many points is a free throw worth in basketball?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q6" value="a"> 1 point</label>
+          <label><input type="radio" name="q6" value="b"> 2 points</label>
+          <label><input type="radio" name="q6" value="c"> 3 points</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>7. Which Korean drama genre usually focuses on romance and emotional storytelling?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q7" value="a"> Documentary</label>
+          <label><input type="radio" name="q7" value="b"> Melodrama</label>
+          <label><input type="radio" name="q7" value="c"> Horror</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>8. Which fragrance note is commonly described as fresh and citrusy?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q8" value="a"> Vanilla</label>
+          <label><input type="radio" name="q8" value="b"> Musk</label>
+          <label><input type="radio" name="q8" value="c"> Lemon</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>9. Which basketball position usually handles the ball the most?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q9" value="a"> Point Guard</label>
+          <label><input type="radio" name="q9" value="b"> Center</label>
+          <label><input type="radio" name="q9" value="c"> Power Forward</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>10. Which type of bag is commonly used by students for school?</p>
+
+        <div class="options">
+          <label><input type="radio" name="q10" value="a"> Coin Purse</label>
+          <label><input type="radio" name="q10" value="b"> Backpack</label>
+          <label><input type="radio" name="q10" value="c"> Clutch Bag</label>
+        </div>
+      </div>
+
+      <button onclick="checkQuiz()">Submit Quiz</button>
+
+      <div id="result"></div>
+
+    </div>
+  </div>
+
+  <script>
+
+    function checkQuiz(){
+
+      let answers = {
+
+        q1:"b",
+        q2:"c",
+        q3:"a",
+        q4:"b",
+        q5:"c",
+        q6:"a",
+        q7:"b",
+        q8:"c",
+        q9:"a",
+        q10:"b"
+
+      };
+
+      let score = 0;
+
+      for(let key in answers){
+
+        let selected =
+        document.querySelector('input[name="'+key+'"]:checked');
+
+        if(selected && selected.value === answers[key]){
+
+          score++;
+
+        }
+      }
+
+      let name = document.getElementById("name").value;
+
+      document.getElementById("result").innerHTML =
+      "♡ " + name + ", your score is " + score + " / 10 ♡";
+
+    }
+
+  </script>
+
+</body>
+</html>
