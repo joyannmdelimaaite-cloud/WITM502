@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joy's Memory Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f9f9f9;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(5, 100px); /* 5 columns for 20 cards */
+      gap: 10px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background: #ff4081;
+      color: white;
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .hidden {
+      background: #ccc;
+      color: transparent;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Interest-Themed Memory Game</h1>
+  <p>Match all the pairs. Good Luck </p>
+  <div class="game-board" id="gameBoard"></div>
+
+  <script>
+    // 10 pairs (20 cards total) customized to your interests
+    const icons = [
+      "🌸","🌸",   
+      "🛍️","🛍️", 
+      "🏀","🏀",   
+      "👟","👟",   
+      "🎬","🎬",   
+      "👜","👜",   
+      "📚","📚",   
+      "🎵","🎵",   
+      "🌱","🌱",   
+      "💃","💃"    
+    ];
+
+    let shuffled = icons.sort(() => 0.5 - Math.random());
+    const board = document.getElementById("gameBoard");
+
+    let firstCard = null;
+    let secondCard = null;
+    let lockBoard = false;
+
+    shuffled.forEach((icon, index) => {
+      const card = document.createElement("div");
+      card.classList.add("card", "hidden");
+      card.dataset.icon = icon;
+      card.dataset.index = index;
+      card.innerText = icon;
+
+      card.addEventListener("click", () => {
+        if (lockBoard || !card.classList.contains("hidden")) return;
+
+        card.classList.remove("hidden");
+
+        if (!firstCard) {
+          firstCard = card;
+        } else {
+          secondCard = card;
+          lockBoard = true;
+
+          if (firstCard.dataset.icon === secondCard.dataset.icon) {
+            firstCard = null;
+            secondCard = null;
+            lockBoard = false;
+          } else {
+            setTimeout(() => {
+              firstCard.classList.add("hidden");
+              secondCard.classList.add("hidden");
+              firstCard = null;
+              secondCard = null;
+              lockBoard = false;
+            }, 1000);
+          }
+        }
+      });
+
+      board.appendChild(card);
+    });
+  </script>
+</body>
+</html>

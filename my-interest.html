@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Interests</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#fff5fb;
+      color:#444;
+      overflow-x:hidden;
+    }
+
+    /* NAVIGATION */
+
+    nav{
+      width:100%;
+      background:#ffffffdd;
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid #ffd6ea;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      padding:14px 20px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
+      text-decoration:none;
+      color:#666;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:9px 15px;
+      border-radius:999px;
+      transition:0.3s;
+      font-size:14px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      background:#ff69b4;
+      color:white;
+    }
+
+    /* HERO */
+
+    .hero{
+      max-width:1100px;
+      height:220px;
+      margin:35px auto;
+      border-radius:30px;
+      overflow:hidden;
+      position:relative;
+      background:
+      linear-gradient(rgba(255,105,180,0.35),
+      rgba(180,80,255,0.35)),
+      url('https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=1200&auto=format&fit=crop')
+      center/cover no-repeat;
+      box-shadow:0 15px 35px rgba(255,105,180,0.2);
+    }
+
+    .hero-content{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-family:'Gaegu', cursive;
+      font-size:62px;
+      margin-bottom:15px;
+      text-shadow:2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .hero-content p{
+      max-width:700px;
+      line-height:1.8;
+      font-size:16px;
+      font-weight:300;
+    }
+
+    /* FLOATING STICKERS */
+
+    .sticker{
+      position:absolute;
+      font-size:28px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .sticker1{
+      top:35px;
+      left:45px;
+    }
+
+    .sticker2{
+      bottom:40px;
+      right:50px;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    /* INTEREST SECTION */
+
+    .interest-container{
+      max-width:1100px;
+      margin:auto;
+      padding:10px 20px 70px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:28px;
+    }
+
+    .interest-card{
+      background:white;
+      border-radius:28px;
+      padding:28px;
+      border:2px solid #ffe2f1;
+      box-shadow:0 10px 25px rgba(255,105,180,0.08);
+      transition:0.35s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .interest-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .interest-card::before{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      background:#ffe8f4;
+      border-radius:50%;
+      top:-40px;
+      right:-40px;
+    }
+
+    .interest-icon{
+      width:70px;
+      height:70px;
+      border-radius:20px;
+      background:#ffe4f2;
+      color:#ff5ca8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      margin-bottom:20px;
+      position:relative;
+      z-index:2;
+    }
+
+    .interest-card h2{
+      font-family:'Gaegu', cursive;
+      font-size:38px;
+      color:#ff5ca8;
+      margin-bottom:15px;
+      position:relative;
+      z-index:2;
+    }
+
+    .interest-card p{
+      line-height:1.9;
+      color:#666;
+      font-size:15px;
+      position:relative;
+      z-index:2;
+    }
+
+    /* TAGS */
+
+    .drama-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .tag{
+      background:#ffe8f4;
+      color:#ff4f9d;
+      padding:10px 16px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:500;
+    }
+
+    /* FAVORITE BOX */
+
+    .favorite-box{
+      margin-top:20px;
+      background:#fff3fa;
+      border-radius:18px;
+      padding:16px;
+      border:1px dashed #ff9ccc;
+    }
+
+    .favorite-box h4{
+      color:#ff5ca8;
+      margin-bottom:8px;
+      font-size:15px;
+    }
+
+    .favorite-box p{
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:25px;
+      color:#999;
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero{
+        margin:20px;
+      }
+
+      .hero-content h1{
+        font-size:46px;
+      }
+
+      .hero-content p{
+        font-size:14px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-link">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+
+      <a href="about-me.html" class="nav-link">
+        <i class="fa-regular fa-user"></i> About Me
+      </a>
+
+      <a href="#" class="nav-link active">
+        <i class="fa-regular fa-heart"></i> My Interest
+      </a>
+
+      <a href="#" class="nav-link">
+        <i class="fa-solid fa-brain"></i> Short Quiz
+      </a>
+
+      <a href="game.html" class="nav-link">
+        <i class="fa-solid fa-gamepad"></i> Simple Game
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>♡ My Interests ♡</h1>
+
+      <p>
+        These are some of the things that make me happy,
+        inspired, and excited every day ~
+        From Korean dramas to fashion and perfumes,
+        here’s a little glimpse into my favorite things!
+      </p>
+
+    </div>
+
+  </section>
+
+  
+  <section class="interest-container">
+
+    <!-- KOREAN DRAMAS -->
+
+    <div class="interest-card">
+
+      <div class="interest-icon">
+        <i class="fa-solid fa-tv"></i>
+      </div>
+
+      <h2>Korean Novelas</h2>
+
+      <p>
+        I love watching Korean novelas and dramas because
+        of their emotional stories, beautiful cinematography,
+        stylish fashion, and lovable characters.
+      </p>
+
+      <div class="drama-list">
+
+        <div class="tag">👻 Ghost Doctor</div>
+
+        <div class="tag">🍽️ Bon Appetit Your Majesty</div>
+
+        <div class="tag">⚖️ Phantom Lawyer</div>
+
+      </div>
+
+      <div class="favorite-box">
+
+        <h4>Why I Love Them ✨</h4>
+
+        <p>
+          Korean dramas inspire me with their beautiful
+          aesthetics, emotional storytelling, and cute romance scenes.
+        </p>
+
+      </div>
+
+    </div>
+
+    
+
+    <div class="interest-card">
+
+      <div class="interest-icon">
+        <i class="fa-solid fa-spray-can-sparkles"></i>
+      </div>
+
+      <h2>Perfumes</h2>
+
+      <p>
+        I love perfumes because they make me feel confident,
+        elegant, fresh, and feminine every day.
+      </p>
+
+        <div class="drama-list">
+
+        <div class="tag">Romantic</div>
+
+        <div class="tag">Midnight Bloom</div>
+
+        <div class="tag">Temptation</div>
+
+        <div class="tag">Pearl Glace</div>
+        <div class="tag">Bare Vanilla</div>
+        <div class="tag">Love Spell</div>
+
+
+      </div>
+      <div class="favorite-box">
+
+        <h4>Favorite Brand 💕</h4>
+
+        <p>
+          Victoria’s Secret perfumes are my favorite because
+          they have sweet floral scents that feel classy and soft.
+        </p>
+
+        
+      </div>
+
+    </div>
+
+    <!-- BAGS -->
+
+    <div class="interest-card">
+
+      <div class="interest-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+
+      <h2>Bags</h2>
+
+      <p>
+        I love bags, someday I wish I can collect big and stylish bags that match
+        trendy fashion. Big bags are practical because they let you carry everything 
+        in one place—whether it’s work essentials, shopping finds, or travel gear
+      </p>
+
+      <div class="drama-list">
+
+        <div class="tag">Gucci</div>
+
+        <div class="tag">Loewe</div>
+
+        <div class="tag">Chanel</div>
+
+        <div class="tag">Bottega Veneta</div>
+        <div class="tag">Prada</div>
+
+      </div>
+
+      <div class="favorite-box">
+
+        <h4>My Style 🌸</h4>
+
+        <p>
+          I love feminine designs with elegant details,
+          soft pink colors, and trendy Korean looks.
+        </p>
+
+      </div>
+
+    </div>
+<div class="interest-card">
+
+  <div class="interest-icon">
+    <i class="fa-solid fa-shoe-prints"></i>
+  </div>
+
+  <h2>Shoes</h2>
+
+  <p>
+    I also love shoes, and wishes to have shoe collection too. I love 
+    rubber shoes and comfy shoes.  Rubber shoes are practical and durable, perfect for walking, running, or casual outings.
+    While Sneakers blend style with comfort. They’re fashionable yet practical, fitting almost any occasion.
+  </p>
+
+  <div class="drama-list">
+
+    <div class="tag"> Sneakers</div>
+
+    <div class="tag">Nike</div>
+
+    <div class="tag">Adidas</div>
+
+    <div class="tag">Vans</div>
+    <div class="tag">Converse</div>
+    <div class="tag">New Balance</div>
+
+
+  </div>
+
+  <div class="favorite-box">
+
+    <h4>My Favorite Style 🌸</h4>
+
+    <p>
+      I enjoy comfortable but fashionable shoes that can
+      match dresses, cute outfits, and everyday looks.
+    </p>
+
+  </div>
+
+</div>
+
+    <div class="interest-card">
+
+      <div class="interest-icon">
+        <i class="fa-solid fa-shirt"></i>
+      </div>
+
+      <h2>Ukay-Ukay Business</h2>
+
+      <p>
+        I’m also interested in Ukay-Ukay businesses because
+        I love discovering unique fashion pieces,
+        trendy outfits, and affordable styles.
+      </p>
+
+      <div class="drama-list">
+
+        <div class="tag">🛍️ Thrifting</div>
+
+        <div class="tag">✨ Fashion Finds</div>
+
+        <div class="tag">💖 Affordable Style</div>
+
+        
+      </div>
+
+      <div class="favorite-box">
+
+        <h4>Why I Love It ♡</h4>
+
+        <p>
+          Ukay-Ukay shopping feels exciting because every visit
+          can uncover hidden treasures and cute fashion finds.
+        </p>
+
+      </div>
+
+    </div>
+    
+<div class="interest-card">
+
+  <div class="interest-icon">
+    <i class="fa-solid fa-basketball"></i>
+  </div>
+
+  <h2>Basketball</h2>
+
+  <p>
+    Basketball is one of the sports I enjoy because
+    it’s exciting, energetic, and fun to watch.
+    I admire teamwork, confidence, and determination in the game.
+  </p>
+
+  <div class="drama-list">
+
+    <div class="tag">🏀 PBA and NBA Games</div>
+
+    <div class="tag">Golden State Warriors</div>
+
+    <div class="tag">Brgy. Ginebra</div>
+
+    
+  </div>
+
+  <div class="favorite-box">
+
+    <h4>Why I Like It ♡</h4>
+
+    <p>
+      Basketball gives me excitement and motivation.
+      I enjoy watching intense matches, amazing plays,
+      and the energy of the crowd.
+    </p>
+
+  </div>
+
+</div>
+
+  </section>
+
+  
+</body>
+</html>

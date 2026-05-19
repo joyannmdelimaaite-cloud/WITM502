@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#fff5fb;
+      color:#444;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      background:#ffffffdd;
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid #ffd6ea;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      padding:14px 20px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
+      text-decoration:none;
+      color:#666;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:9px 15px;
+      border-radius:999px;
+      transition:0.3s;
+      font-size:14px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      background:#ff69b4;
+      color:white;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      max-width:1100px;
+      height:220px;
+      margin:35px auto;
+      border-radius:30px;
+      overflow:hidden;
+      position:relative;
+      background:
+      linear-gradient(rgba(255,105,180,0.35),
+      rgba(180,80,255,0.35)),
+      url('https://images.unsplash.com/photo-1528164344705-47542687000d?q=80&w=1200&auto=format&fit=crop')
+      center/cover no-repeat;
+      box-shadow:0 15px 35px rgba(255,105,180,0.2);
+    }
+
+    .hero-content{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-family:'Gaegu', cursive;
+      font-size:60px;
+      margin-bottom:15px;
+      text-shadow:2px 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .hero-content p{
+      max-width:650px;
+      line-height:1.8;
+      font-size:16px;
+      font-weight:300;
+    }
+
+    /* FLOATING STICKERS */
+
+    .sticker{
+      position:absolute;
+      font-size:28px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .star1{
+      top:30px;
+      left:40px;
+    }
+
+    .star2{
+      bottom:40px;
+      right:50px;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    /* ABOUT SECTION */
+
+    .about-container{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:350px 1fr;
+      gap:35px;
+      padding:10px 20px 60px;
+    }
+
+    /* PROFILE CARD */
+
+    .profile-card{
+      background:white;
+      border-radius:28px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(255,105,180,0.12);
+      border:2px solid #ffe0f0;
+      position:relative;
+    }
+
+    .profile-card::before{
+      content:"♡";
+      position:absolute;
+      top:18px;
+      right:22px;
+      font-size:24px;
+      color:#ff8fc7;
+    }
+
+    .profile-img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid #ffd0ea;
+      margin-bottom:20px;
+    }
+
+    .profile-card h2{
+      font-family:'Gaegu', cursive;
+      font-size:40px;
+      color:#ff5ca8;
+      margin-bottom:10px;
+    }
+
+    .profile-card p{
+      color:#777;
+      font-size:14px;
+      line-height:1.7;
+      margin-bottom:20px;
+    }
+
+    .socials{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+    }
+
+    .socials a{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:#ffe4f2;
+      color:#ff5ca8;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .socials a:hover{
+      background:#ff69b4;
+      color:white;
+      transform:translateY(-4px);
+    }
+
+    /* INFO SECTION */
+
+    .info-section{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .info-card{
+      background:white;
+      border-radius:24px;
+      padding:28px;
+      border:2px solid #ffe4f1;
+      box-shadow:0 8px 20px rgba(255,105,180,0.08);
+      transition:0.3s;
+    }
+
+    .info-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .info-card h3{
+      color:#ff5ca8;
+      margin-bottom:15px;
+      font-size:22px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .info-card p{
+      line-height:1.9;
+      color:#666;
+      font-size:15px;
+    }
+
+    /* HOBBIES */
+
+    .hobbies{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:15px;
+    }
+
+    .tag{
+      background:#ffe8f4;
+      color:#ff4f9d;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:500;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px){
+
+      .about-container{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        margin:20px;
+      }
+
+      .hero-content h1{
+        font-size:45px;
+      }
+    }
+    .styled-image {
+      width: 80%;              
+      max-width: 600px;        
+      border: 5px solid #f8a2ca;
+      border-radius: 15px;     
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+      margin: 20px auto;       
+      display: block;          
+      transition: transform 0.3s ease; 
+    }
+
+    .styled-image:hover {
+      transform: scale(1.05); 
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-link">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+
+      <a href="about-me.html" class="nav-link active">
+        <i class="fa-regular fa-user"></i> About Me
+      </a>
+
+      <a href="my-interest.html" class="nav-link">
+        <i class="fa-regular fa-heart"></i> My Interest
+      </a>
+
+      <a href="#" class="nav-link">
+        <i class="fa-solid fa-brain"></i> Short Quiz
+      </a>
+
+      <a href="game.html" class="nav-link">
+        <i class="fa-solid fa-gamepad"></i> Simple Game
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    
+    <div class="hero-content">
+      <h1>♡ Know Me ♡</h1>
+
+      <p>
+        Welcome to my world ~
+        Here you can learn more about me,
+        my personality, hobbies, dreams,
+        and everything that makes me who I am!
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ABOUT CONTENT -->
+
+  <section class="about-container">
+
+    
+
+    <div class="profile-card">
+
+      <h2>Joy Ann Morales De Lima</h2>
+
+      <p>
+        I.T. Instructor • Wife • Mother <br>
+        Loves cute aesthetics, Korean Series,
+        cartoons, music, and shopping.
+      </p>
+      <img src="images/family.jpg" class="styled-image">
+     
+
+    </div>
+
+
+
+    <div class="info-section">
+
+      <div class="info-card">
+
+        <h3>
+          <i class="fa-solid fa-heart"></i>
+          My Story
+        </h3>
+
+        <p>
+           I.T. instructor , teaches with patience, humor, and a spark that shows I am young at heart.
+           At home, a loving wife and a devoted mother. Drahcir, my  son is my greatest inspiration, reminding 
+           me daily that learning never stops and that curiosity is a gift to be nurtured. I  balances family
+            and career finding joy in small moments—whether it’s helping my son with homework, sharing laughter 
+            at the dinner table, or simple chit chat  with my  husband.
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <h3>
+          <i class="fa-solid fa-star"></i>
+          My Personality
+        </h3>
+
+        <p>
+          As an I.T. instructor, wife, and mother, my Piscean traits shine in unique ways:
+          In teaching, my empathy and creativity help students feel supported and inspired.
+          In family life, my compassion and intuition makes me a nurturing wife and mother.
+          Being “young at heart” reflects Pisces’ playful, imaginative side—, balances responsibility with joy.
+        </p>
+
+      </div>
+
+      <div class="info-card">
+
+        <h3>
+          <i class="fa-solid fa-puzzle-piece"></i>
+          My Hobbies
+        </h3>
+
+        <div class="hobbies">
+
+          <div class="tag"> <i class="fa-solid fa-seedling"></i> Gardening</div>
+
+          <div class="tag"><i class="fa-solid fa-person-running"></i> Zumba</div>
+
+          <div class="tag"><i class="fa-solid fa-music"></i> Music</div>
+
+            <div class="tag"><i class="fa-solid fa-bag-shopping"></i> Shopping </div>         
+
+          <div class="tag"><i class="fa-solid fa-book-open"></i> Reading</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
