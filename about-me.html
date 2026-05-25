@@ -140,14 +140,14 @@
 
     /* ABOUT SECTION */
 
-    .about-container{
-      max-width:1100px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:350px 1fr;
-      gap:35px;
-      padding:10px 20px 60px;
-    }
+    .about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 35px;
+  padding: 10px 20px 60px;
+}
 
     /* PROFILE CARD */
 
@@ -273,22 +273,135 @@
     }
 
     /* RESPONSIVE */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 35px;
+  padding: 10px 20px 60px;
+}
 
-    @media(max-width:900px){
+.hero-content h1 {
+  font-size: 60px;
+}
 
-      .about-container{
-        grid-template-columns:1fr;
-      }
+.hero-content p {
+  font-size: 16px;
+}
 
-      .hero{
-        margin:20px;
-      }
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr; /* stack profile + info */
+    gap: 25px;
+  }
 
-      .hero-content h1{
-        font-size:45px;
-      }
-    }
-    .styled-image {
+  .hero {
+    margin: 20px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .profile-card h2 {
+    font-size: 32px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  nav .nav-container {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .hero {
+    margin: 15px;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-card h2 {
+    font-size: 28px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .info-card h3 {
+    font-size: 20px;
+  }
+
+  .info-card p {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+/* Small Phones */
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .profile-card h2 {
+    font-size: 22px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-card {
+    padding: 20px;
+  }
+
+  .info-card h3 {
+    font-size: 18px;
+  }
+
+  .info-card p {
+    font-size: 13px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+   .styled-image {
       width: 80%;              
       max-width: 600px;        
       border: 5px solid #f8a2ca;
