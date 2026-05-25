@@ -244,32 +244,34 @@
 
     /* RESPONSIVE */
 
-    @media(max-width:768px){
+    @media screen and (max-width: 768px) {
+  .hero {
+    margin: 10px;
+    padding: 10px;
+  }
 
-      .hero{
-        margin:20px;
-      }
+  .hero-content h1 {
+    font-size: 32px; /* smaller for mobile */
+    line-height: 1.2;
+  }
 
-      .hero-content h1{
-        font-size:48px;
-      }
+  .hero-content p {
+    font-size: 14px;
+  }
 
-      .hero-content p{
-        font-size:14px;
-      }
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr)); /* 2 cards per row */
+    gap: 10px;
+  }
 
-      .game-board{
-        grid-template-columns:repeat(4, 75px);
-        gap:10px;
-      }
+  .card {
+    width: 100%; /* fills grid cell */
+    aspect-ratio: 1 / 1; /* keeps square shape */
+    font-size: 20px;
+  }
+}
 
-      .card{
-        width:75px;
-        height:75px;
-        font-size:28px;
-      }
-
-    }
 
   </style>
 
