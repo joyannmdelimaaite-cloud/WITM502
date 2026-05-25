@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Memory Game</title>
 
   <!-- GOOGLE FONTS -->
@@ -244,14 +245,14 @@
 
     /* RESPONSIVE */
 
-    @media screen and (max-width: 768px) {
+   @media screen and (max-width: 768px) {
   .hero {
     margin: 10px;
     padding: 10px;
   }
 
   .hero-content h1 {
-    font-size: 32px; /* smaller for mobile */
+    font-size: 32px;
     line-height: 1.2;
   }
 
@@ -261,14 +262,14 @@
 
   .game-board {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr)); /* 2 cards per row */
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    gap: 8px;
   }
 
   .card {
-    width: 100%; /* fills grid cell */
-    aspect-ratio: 1 / 1; /* keeps square shape */
-    font-size: 20px;
+    width: 100%;              /* fills grid cell */
+    aspect-ratio: 1 / 1;      /* keeps square shape */
+    font-size: clamp(16px, 4vw, 24px); /* scales with screen size */
   }
 }
 
