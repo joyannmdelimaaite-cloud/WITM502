@@ -140,6 +140,37 @@
       }
     }
 
+     .table-container {
+      max-height: 250px; /* adjust height as needed */
+      overflow-y: auto;
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .show-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .show-table th, .show-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .show-table th {
+      background-color: #ffebf3;
+      color: #333;
+      font-weight: 600;
+      position: sticky;
+      top: 0; /* keeps header visible while scrolling */
+    }
+
+    .show-table tr:hover {
+      background-color: #fff5fa;
+    }
+
     /* INTEREST SECTION */
 
     .interest-container{
@@ -274,7 +305,58 @@
       }
 
     }
+    .table-container {
+      max-height: 250px; /* adjust height as needed */
+      overflow-y: auto;
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
+    .perfume-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .perfume-table th, .perfume-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .perfume-table th {
+      background-color: #ffebf3;
+      color: #333;
+      font-weight: 600;
+      position: sticky;
+      top: 0; /* keeps header visible while scrolling */
+    }
+
+    .perfume-table tr:hover {
+      background-color: #fff5fa;
+    }
+.bag-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .bag-table th, .bag-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .bag-table th {
+      background-color: #ffebf3;
+      color: #333;
+      font-weight: 600;
+      position: sticky;
+      top: 0; /* keeps header visible while scrolling */
+    }
+
+    .bag-table tr:hover {
+      background-color: #fff5fa;
+    }
   </style>
 </head>
 
@@ -294,15 +376,15 @@
         <i class="fa-regular fa-user"></i> About Me
       </a>
 
-      <a href="#" class="nav-link active">
-        <i class="fa-regular fa-heart"></i> My Interest
+      <a href="my-interest.html" class="nav-link active">
+        <i class="fa-regular fa-heart"></i> My Interests
       </a>
 
       <a href="my-quiz.html" class="nav-link">
         <i class="fa-solid fa-brain"></i> Short Quiz
       </a>
 
-      <a href="game.html" class="nav-link">
+      <a href="my-game.html" class="nav-link">
         <i class="fa-solid fa-gamepad"></i> Simple Game
       </a>
 
@@ -348,17 +430,48 @@
         stylish fashion, and lovable characters.
       </p>
 
-      <div class="drama-list">
+      <div class="table-container">
+      <table class="show-table">
+        <tr>
+          <th>Title</th>
+          <th>Why It Stands Out</th>
+        </tr>
+        <tr>
+          <td>Ghost Doctor</td>
+          <td>A unique blend of hospital drama and supernatural elements.</td>
+        </tr>
+        <tr>
+          <td>Bon Appetit Your Majesty</td>
+          <td>Combines food, love, and royal charm in a lighthearted way.</td>
+        </tr>
+        <tr>
+          <td>Phantom Lawyer</td>
+          <td>Sharp courtroom battles mixed with mystery and suspense.</td>
+        </tr>
+        <tr>
+          <td>Crash Landing on You</td>
+          <td>A cross-border love story that captured global audiences.</td>
+        </tr>
+        <tr>
+          <td>Goblin</td>
+          <td>Beautifully shot with a touching storyline about immortality and love.</td>
+        </tr>
+        <tr>
+          <td>Itaewon Class</td>
+          <td>A tale of resilience, ambition, and building dreams against all odds.</td>
+        </tr>
+        <tr>
+          <td>True Beauty</td>
+          <td>A heartfelt story about self-confidence, beauty, and teenage love.</td>
+        </tr>
+        <tr>
+          <td>Vincenzo</td>
+          <td>A mafia lawyer delivering justice with wit and style.</td>
+        </tr>
+      </table>
+    </div>
 
-        <div class="tag">👻 Ghost Doctor</div>
-
-        <div class="tag">🍽️ Bon Appetit Your Majesty</div>
-
-        <div class="tag">⚖️ Phantom Lawyer</div>
-
-      </div>
-
-      <div class="favorite-box">
+           <div class="favorite-box">
 
         <h4>Why I Love Them ✨</h4>
 
@@ -386,20 +499,38 @@
         elegant, fresh, and feminine every day.
       </p>
 
-        <div class="drama-list">
-
-        <div class="tag">Romantic</div>
-
-        <div class="tag">Midnight Bloom</div>
-
-        <div class="tag">Temptation</div>
-
-        <div class="tag">Pearl Glace</div>
-        <div class="tag">Bare Vanilla</div>
-        <div class="tag">Love Spell</div>
-
-
-      </div>
+        <div class="table-container">
+      <table class="perfume-table">
+        <tr>
+          <th>Perfume Name</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Romantic</td>
+          <td>Rose, Jasmine, Musk</td>
+        </tr>
+        <tr>
+          <td>Midnight Bloom</td>
+          <td>Amber, Vanilla, Orchid</td>
+        </tr>
+        <tr>
+          <td>Temptation</td>
+          <td>Apple, Black Currant, Musk</td>
+        </tr>
+        <tr>
+          <td>Pearl Glace</td>
+          <td>Water Lily, Citrus, Musk</td>
+        </tr>
+        <tr>
+          <td>Bare Vanilla</td>
+          <td>Vanilla, Musk, Cashmere</td>
+        </tr>
+        <tr>
+          <td>Love Spell</td>
+          <td>Cherry Blossom, Peach, Aloe</td>
+        </tr>
+      </table>
+    </div>
       <div class="favorite-box">
 
         <h4>Favorite Brand 💕</h4>
@@ -414,7 +545,6 @@
 
     </div>
 
-    <!-- BAGS -->
 
     <div class="interest-card">
 
@@ -429,19 +559,36 @@
         trendy fashion. Big bags are practical because they let you carry everything 
         in one place—whether it’s work essentials, shopping finds, or travel gear
       </p>
+       <div class="table-container">
+      <table class="bag-table">
+        <tr>
+          <th>Brand</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Gucci</td>
+          <td>Luxury Italian brand known for bold designs and iconic monograms.</td>
+        </tr>
+        <tr>
+          <td>Loewe</td>
+          <td>Spanish brand famous for artisanal leather craftsmanship.</td>
+        </tr>
+        <tr>
+          <td>Chanel</td>
+          <td>Classic French fashion house with timeless quilted bags.</td>
+        </tr>
+        <tr>
+          <td>Bottega Veneta</td>
+          <td>Renowned for woven leather “Intrecciato” designs and modern chic.</td>
+        </tr>
+        <tr>
+          <td>Prada</td>
+          <td>Innovative styles blending practicality with high fashion elegance.</td>
+        </tr>
+      </table>
+    </div>
 
-      <div class="drama-list">
-
-        <div class="tag">Gucci</div>
-
-        <div class="tag">Loewe</div>
-
-        <div class="tag">Chanel</div>
-
-        <div class="tag">Bottega Veneta</div>
-        <div class="tag">Prada</div>
-
-      </div>
+      
 
       <div class="favorite-box">
 
@@ -464,6 +611,7 @@
   <h2>Shoes</h2>
 
   <p>
+    Shoes have always fascinated me because they are more than just something to wear — they are a reflection of personality, comfort, and style. I love how rubber shoes give me durability and practicality for everyday activities, while sneakers blend fashion with ease, making them perfect for almost any occasion. Each pair tells a story: whether it’s the sporty vibe of running shoes, the casual charm of canvas sneakers, or the chic elegance of stylish pairs that match dresses and outfits.
     I also love shoes, and wishes to have shoe collection too. I love 
     rubber shoes and comfy shoes.  Rubber shoes are practical and durable, perfect for walking, running, or casual outings.
     While Sneakers blend style with comfort. They’re fashionable yet practical, fitting almost any occasion.
@@ -471,7 +619,7 @@
 
   <div class="drama-list">
 
-    <div class="tag"> Sneakers</div>
+    <div class="tag"> Sketchers</div>
 
     <div class="tag">Nike</div>
 
@@ -506,9 +654,7 @@
       <h2>Ukay-Ukay</h2>
 
       <p>
-        I’m also interested in Ukay-Ukay businesses because
-        I love discovering unique fashion pieces,
-        trendy outfits, and affordable styles.
+        Ukay-Ukay has always sparked my interest because it combines fashion, creativity, and sustainability. Every thrift shop visit feels like a treasure hunt — you never know what unique pieces you’ll uncover. From vintage jackets to trendy tops, the joy comes from finding affordable styles that still look chic and original.
       </p>
 
       <div class="drama-list">
@@ -521,6 +667,15 @@
 
         
       </div>
+      <div class="list-section">
+      <h2> Best Finds and Trends</h2>
+      <ul>
+        <li>Vintage denim jackets that never go out of style</li>
+        <li>Branded handbags at a fraction of the price</li>
+        <li>Retro sneakers and rubber shoes</li>
+        <li>Elegant dresses perfect for special occasions</li>
+      </ul>
+    </div>
 
       <div class="favorite-box">
 
@@ -559,6 +714,24 @@
 
     
   </div>
+   <div class="list-section">
+      <h2> Best Players</h2>
+      <ul>
+        <li>Stephen Curry – unmatched shooting and leadership</li>
+        <li>LeBron James – versatile, powerful, and inspiring</li>
+        <li>Scottie Thompson – PBA star known for hustle and heart</li>
+        <li>Japeth Aguilar – Brgy. Ginebra’s reliable big man</li>
+      </ul>
+    </div>
+
+    <div class="list-section">
+      <h2> Championships</h2>
+      <ul>
+        <li>Golden State Warriors – NBA titles in 2015, 2017, 2018, 2022</li>
+        <li>Brgy. Ginebra – multiple PBA championships, most recently in 2023</li>
+        <li>Historic NBA Finals – Lakers vs Celtics rivalries, Bulls dynasty in the 1990s</li>
+      </ul>
+    </div>
 
   <div class="favorite-box">
 
@@ -574,55 +747,10 @@
 
 </div>
 
+
   </section>
- 
-<section class="interest-table" style="width:60%; margin:40px auto; padding:20px;">
-  <h2 style="color:#ff5ca8; font-family:'Gaegu', cursive; text-align:center; margin-bottom:20px;">
-    Interests Overview Table
-  </h2>
+
   
-  <table style="width:100%; border-collapse:collapse; font-size:15px; box-shadow:0 5px 15px rgba(255,105,180,0.1);">
-    <thead>
-      <tr style="background:#ffe8f4; color:#ff4f9d;">
-        <th style="padding:12px; border:1px solid #ffd6ea;">Interest</th>
-        <th style="padding:12px; border:1px solid #ffd6ea;">Favorites / Tags</th>
-        <th style="padding:12px; border:1px solid #ffd6ea;">Why I Love It</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Korean Novelas</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Ghost Doctor, Bon Appetit Your Majesty, Phantom Lawyer</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Emotional stories, stylish fashion, cinematic visuals</td>
-      </tr>
-      <tr>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Perfumes</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Romantic, Midnight Bloom, Temptation, Pearl Glace</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Boosts confidence, elegance, and femininity</td>
-      </tr>
-      <tr>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Bags</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Gucci, Loewe, Chanel, Prada</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Classy, versatile, feminine designs</td>
-      </tr>
-      <tr>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Shoes</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Nike, Adidas, Vans, Converse, New Balance</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Comfortable yet stylish for any occasion</td>
-      </tr>
-      <tr>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Ukay-Ukay Business</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Thrifting, Fashion Finds, Affordable Style</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Exciting treasure hunt for affordable fashion</td>
-      </tr>
-      <tr>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Basketball</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">PBA/NBA Games, Golden State Warriors, Brgy. Ginebra</td>
-        <td style="padding:12px; border:1px solid #ffd6ea;">Teamwork, discipline, and thrilling matches</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-  
+
 </body>
 </html>

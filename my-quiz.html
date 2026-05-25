@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
 
   <title>My Interests Quiz</title>
 
@@ -13,17 +22,73 @@
       padding:0;
       box-sizing:border-box;
       font-family: Arial, sans-serif;
+      scroll-behavior:smooth;
     }
 
     body{
       background:#f7e9ef;
-      padding:30px;
       color:#ff4f8b;
     }
+*{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#fff5fb;
+      color:#444;
+      overflow-x:hidden;
+    }
+
+    /* NAVIGATION */
+
+    nav{
+      width:100%;
+      background:#ffffffdd;
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid #ffd6ea;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .nav-container{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      padding:14px 20px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
+      text-decoration:none;
+      color:#666;
+      display:flex;
+      align-items:center;
+      gap:7px;
+      padding:9px 15px;
+      border-radius:999px;
+      transition:0.3s;
+      font-size:14px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      background:#ff69b4;
+      color:white;
+    }
+
+
+    /* MAIN */
 
     .container{
       max-width:850px;
       margin:auto;
+      padding:30px;
     }
 
     .banner{
@@ -33,7 +98,7 @@
 
       background-size:cover;
       background-position:center;
-      padding:35px;
+      padding:40px;
       border-radius:20px;
       text-align:center;
       color:white;
@@ -127,34 +192,168 @@
     }
 
     #result{
-      margin-top:25px;
+  margin-top:25px;
+  padding:20px;
+  border-radius:15px;
+  background:#fff8fb;
+  border:2px dashed #ffc4d7;
+  text-align:left;
+  color:#444;
+  line-height:1.8;
+}
+
+#result h3{
+  color:#ff4f8b;
+  text-align:center;
+  margin-bottom:15px;
+}
+
+#result strong{
+  color:#ff4f8b;
+}
+
+    footer{
       text-align:center;
-      font-size:25px;
-      font-weight:bold;
+      padding:20px;
+      margin-top:30px;
       color:#ff4f8b;
+      font-size:14px;
     }
+    .checkbox-group{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.checkbox-group > label{
+  display:block;
+  margin-bottom:12px;
+  font-weight:600;
+  color:#ff4f8b;
+}
+
+.checkbox-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:12px;
+}
+
+.checkbox-grid label{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px;
+  background:#fff8fb;
+  border:2px dashed #ffd0df;
+  border-radius:12px;
+  cursor:pointer;
+  transition:.3s;
+  color:#444;
+  font-weight:400;
+}
+
+.checkbox-grid label:hover{
+  background:#ffeef5;
+}
 
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <nav>
 
-    <div class="banner">
-      <h1>♡ My Interests Quiz ♡</h1>
-      <p>Test your knowledge about my favorite interests!</p>
+    <div class="nav-container">
+
+      <a href="index.html" class="nav-link">
+         <i class="fa-solid fa-house"></i></i>Home 
+      </a>
+
+      <a href="about-me.html" class="nav-link">
+        <i class="fa-regular fa-user"></i> About Me
+      </a>
+
+      <a href="my-interest.html" class="nav-link >
+        <i class="fa-regular fa-heart"></i> My Interests
+      </a>
+
+      <a href="my-quiz.html" class="nav-link" active">
+        <i class="fa-solid fa-brain"></i> Short Quiz
+      </a>
+
+      <a href="my-game.html" class="nav-link">
+        <i class="fa-solid fa-gamepad"></i> Simple Game
+      </a>
+
     </div>
 
-    <div class="quiz-box">
+  </nav>  
+  
+  <div class="container">
 
-      
+    <!-- BANNER -->
+
+    <div class="banner" id="home">
+
+      <h1>♡ Simple Interests Quiz ♡</h1>
+
+      <p>
+        Test your knowledge about Korean dramas, perfumes,
+        bags, shoes, ukay-ukay, and basketball!
+      </p>
+
+    </div>
+
+    <!-- QUIZ -->
+
+    <div class="quiz-box" id="quiz">
+
+      <!-- FORM -->
+
       <div class="form-group">
         <label>Full Name</label>
         <input type="text" id="name" placeholder="Enter your name">
       </div>
+<div class="checkbox-group">
 
-      
+  <label>Select Your Hobbies (Check all that apply)</label>
+
+  <div class="checkbox-grid">
+
+    <label>
+      <input type="checkbox" name="hobby" value="Reading">
+      Reading
+    </label>
+
+    <label>
+      <input type="checkbox" name="hobby" value="Watching Movies">
+      Watching Movies
+    </label>
+
+    <label>
+      <input type="checkbox" name="hobby" value="Playing Sports">
+      Playing Sports
+    </label>
+
+    <label>
+      <input type="checkbox" name="hobby" value="Gaming">
+      Gaming
+    </label>
+
+    <label>
+      <input type="checkbox" name="hobby" value="Listening to Music">
+      Listening to Music
+    </label>
+
+    <label>
+      <input type="checkbox" name="hobby" value="Traveling">
+      Traveling
+    </label>
+
+  </div>
+
+   
+      <!-- QUESTIONS -->
+
       <div class="question">
         <p>1. Which Korean drama became globally popular because of its survival game concept?</p>
 
@@ -255,12 +454,25 @@
         </div>
       </div>
 
+      <!-- BUTTON -->
+
       <button onclick="checkQuiz()">Submit Quiz</button>
+
+      <!-- RESULT -->
 
       <div id="result"></div>
 
     </div>
+
   </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+    ♡ Created for My Interests Quiz ♡
+  </footer>
+
+  <!-- JAVASCRIPT -->
 
   <script>
 
@@ -297,9 +509,31 @@
 
       let name = document.getElementById("name").value;
 
-      document.getElementById("result").innerHTML =
-      "♡ " + name + ", your score is " + score + " / 10 ♡";
+/* GET ALL SELECTED HOBBIES */
+let hobbies = [];
 
+document
+  .querySelectorAll('input[name="hobby"]:checked')
+  .forEach(function(item){
+      hobbies.push(item.value);
+  });
+
+/* DISPLAY RESULT */
+document.getElementById("result").innerHTML =
+
+"<h3>♡ Quiz Result ♡</h3>" +
+
+"<p><strong>Name:</strong> " + name + "</p>" +
+
+"<p><strong>Selected Hobbies:</strong> " +
+
+(hobbies.length > 0
+    ? hobbies.join(", ")
+    : "No hobbies selected")
+
++ "</p>" +
+
+"<p><strong>Score:</strong> " + score + " / 10</p>";
     }
 
   </script>
