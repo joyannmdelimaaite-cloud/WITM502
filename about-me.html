@@ -149,6 +149,13 @@
   padding: 10px 20px 60px;
 }
 
+    .form-container {
+      max-width: 1100px;
+      margin: auto;    
+      gap: 35px;
+      padding: 10px 20px 60px;
+    }
+
     /* PROFILE CARD */
 
     .profile-card{
@@ -419,6 +426,64 @@
       transform: scale(1.05); 
     }
 
+.form-card {
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  border: 2px solid #ffe4f1;
+  box-shadow: 0 8px 20px rgba(255,105,180,0.08);
+  transition: 0.3s;
+}
+.form-card:hover {
+  transform: translateY(-5px);
+}
+.form-card h3 {
+  color: #ff5ca8;
+  margin-bottom: 15px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* FORM ELEMENTS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+label {
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ffd6ea;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+input:focus, textarea:focus {
+  border-color: #ff69b4;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255,105,180,0.3);
+}
+button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #ff4f9d;
+  transform: translateY(-2px);
+}
   </style>
 </head>
 <body>
@@ -551,7 +616,40 @@
 
     </div>
 
-  </section>
+  
+  <!-- NEW FORM CARD -->
 
+
+</section> 
+<section class="form-container">
+  <div class="form-card">
+  <h3><i class="fa-solid fa-envelope"></i> Contact Me</h3>
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email">
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+ <label>Interests</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="interest" value="Gardening"> Gardening</label>
+      <label><input type="checkbox" name="interest" value="Music"> Music</label>
+      <label><input type="checkbox" name="interest" value="Shopping"> Shopping</label>
+    </div>
+
+    <!-- ✅ Radio Buttons -->
+    <label>Preferred Contact Method</label>
+    <div class="radio-group">
+      <label><input type="radio" name="contact" value="Email"> Email</label>
+      <label><input type="radio" name="contact" value="Phone"> Phone</label>
+      <label><input type="radio" name="contact" value="Messenger"> Messenger</label>
+    <!-- ✅ Submit Button -->
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+</section> 
 </body>
 </html>
