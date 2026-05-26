@@ -16,7 +16,7 @@
   <style>
 
     *{
-      margin:0;
+      
       padding:0;
       box-sizing:border-box;
     }
@@ -159,6 +159,7 @@
       box-shadow:0 10px 25px rgba(255,105,180,0.12);
       border:2px solid #ffe0f0;
       position:relative;
+       overflow:hidden;
     }
 
     .profile-card::before{
@@ -325,7 +326,7 @@
 
   .hero {
     margin: 15px;
-    
+  }
 
   .hero-content h1 {
     font-size: 32px;
@@ -400,16 +401,19 @@
     padding: 6px 12px;
   }
 }
-   .styled-image {
-      width: 80%;              
-      max-width: 600px;        
-      border: 5px solid #f8a2ca;
-      border-radius: 15px;     
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
-      margin: 20px auto;       
-      display: block;          
-      transition: transform 0.3s ease; 
-    }
+ .styled-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  border: 5px solid #f8a2ca;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: block;
+  margin: 20px auto;
+
+  transition: transform 0.3s ease;
+}
 
     .styled-image:hover {
       transform: scale(1.05); 
